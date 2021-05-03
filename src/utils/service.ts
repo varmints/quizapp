@@ -9,6 +9,7 @@ export const addQuizApi = async (auth, values) => {
     const resp = await axios.post("/api/quiz", values, { headers: header });
     return resp;
   } catch (error) {
+    console.error(error.response.data);
     throw error;
   }
 };
